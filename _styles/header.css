@@ -144,4 +144,92 @@ header[data-big] .subtitle {
   font-size: var(--large);
 }
 
+.research-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+.research-text p {
+  margin-bottom: 1.2rem;
+  line-height: 1.85;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.research-lead {
+  font-size: 1.35rem;
+  line-height: 1.8;
+  font-weight: 700;
+  color: #111;
+}
+
+.research-side-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.research-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.research-section {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.research-section.reverse {
+  grid-template-columns: 0.9fr 1fr;
+}
+
+.research-section.reverse .research-section-text {
+  order: 2;
+}
+
+.research-section.reverse .research-section-image {
+  order: 1;
+}
+
+.research-section h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.research-section p {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: #333;
+  margin: 0;
+}
+
+.research-section-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .research-intro,
+  .research-section,
+  .research-section.reverse {
+    grid-template-columns: 1fr;
+  }
+  .research-section.reverse .research-section-text,
+  .research-section.reverse .research-section-image {
+    order: initial;
+  }
+}
+
 /*# sourceMappingURL=header.css.map */
