@@ -2,9 +2,8 @@
 title: Research
 nav:
   order: 1
-  tooltip: Software, datasets, and more
+  tooltip: Research interests
 ---
-
 
 
 <div class="research-intro">
@@ -18,9 +17,6 @@ nav:
     </p>
   </div>
 
-  <div class="research-side-image">
-    <img src="/images/research_main.jpg" alt="Research overview">
-  </div>
 </div>
 
 <div class="research-sections">
