@@ -9,7 +9,7 @@ nav:
 <div class="grid">
   <div class="card">
     <img src="/images/img1.jpeg">
-    <p>Organoid culture</p>
+    <p>Organoid culturdfe</p>
   </div>
 
   <div class="card">
