@@ -1,5 +1,5 @@
 ---
-title: Publications
+title: Publications2222
 nav:
   order: 1
   tooltip: Published works
@@ -26,4 +26,4 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% include list.html data="citations" component="citation" style="rich" %}
 
-permalink: /publications/
+
