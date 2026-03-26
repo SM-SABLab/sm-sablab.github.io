@@ -1,5 +1,5 @@
 ---
-title: Publications2222
+title: Publications
 nav:
   order: 1
   tooltip: Published works
