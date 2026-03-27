@@ -1,6 +1,9 @@
 import json
 from urllib.request import Request, urlopen
 import yaml
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 ORCID_ID = "0000-0002-9526-9891"
 MY_NAME = "Jumee Kim"
@@ -17,12 +20,32 @@ def safe_get(d, *keys):
     return d
 
 
+def get_authors_from_crossref(doi):
+    try:
+        url = f"https://api.crossref.org/works/{doi}"
+        with urlopen(url, timeout=10) as response:
+            data = json.loads(response.read())
+
+        authors = []
+        for a in data["message"].get("author", []):
+            given = a.get("given", "")
+            family = a.get("family", "")
+            name = f"{given} {family}".strip()
+            if name:
+                authors.append(name)
+
+        return authors
+    except:
+        return []
+
+
 request = Request(url=endpoint, headers=headers)
 response = json.loads(urlopen(request, timeout=10).read())
 
 works = response.get("group", [])
 
 citations = []
+seen_ids = set()
 
 for work in works:
     summaries = work.get("work-summary", [])
@@ -42,20 +65,11 @@ for work in works:
         if not title:
             continue
 
-        # 🔥 authors 가져오기 (순서 유지)
-        contributors = (s.get("contributors") or {}).get("contributor", [])
+        authors = get_authors_from_crossref(doi) if doi else []
 
-        authors = []
-        for c in contributors:
-            name = safe_get(c, "credit-name", "value")
-            if name:
-                authors.append(name)
-
-        # fallback
         if not authors:
             authors = [MY_NAME]
 
-        # 🔥 내 이름만 bold (순서 유지)
         cleaned_authors = []
         for name in authors:
             if MY_NAME.lower() in name.lower():
@@ -63,8 +77,14 @@ for work in works:
             else:
                 cleaned_authors.append(name)
 
+        citation_id = f"doi:{doi}" if doi else title
+
+        if citation_id in seen_ids:
+            continue
+        seen_ids.add(citation_id)
+
         citation = {
-            "id": f"doi:{doi}" if doi else title,
+            "id": citation_id,
             "title": title,
             "authors": cleaned_authors,
             "publisher": journal if journal else "Unknown",
@@ -78,7 +98,6 @@ for work in works:
         citations.append(citation)
 
 
-# 최신순 정렬
 citations.sort(key=lambda x: x.get("date", ""), reverse=True)
 
 
