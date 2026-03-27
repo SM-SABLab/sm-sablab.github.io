@@ -143,22 +143,18 @@ for index, source in enumerate(sources):
             # run manubot and set citation
             citation = cite_with_manubot(_id)
 
-        # if manubot cannot cite source
+                # if manubot cannot cite source
         except Exception as e:
             plugin = get_safe(source, "plugin", "")
             file = get_safe(source, "file", "")
-            # if regular source (id entered by user), throw error
-            if plugin == "sources.py":
-                log(e, indent=3, level="ERROR")
-                errors.append(f"Manubot could not generate citation for source {_id}")
-            # otherwise, if from metasource (id retrieved from some third-party api), just warn
-            else:
-                log(e, indent=3, level="WARNING")
-                warnings.append(
-                    f"Manubot could not generate citation for source {_id} (from {file} with {plugin})"
-                )
-                # discard source from citations
-                continue
+
+            log(e, indent=3, level="WARNING")
+            warnings.append(
+                f"Manubot could not generate citation for source {_id} (from {file} with {plugin}); using raw source data instead"
+            )
+
+            # fallback: keep raw source data instead of discarding it
+            citation = {}
 
     # preserve fields from input source, overriding existing fields
     citation.update(source)
