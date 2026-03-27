@@ -17,7 +17,7 @@ def main(entry):
     # get id from entry
     _id = get_safe(entry, "orcid", "")
     if not _id:
-        raise Exception('No "orcid" key')
+        eturn []
 
     # query api
     @log_cache
@@ -139,6 +139,7 @@ def main(entry):
         source.update(entry)
 
         # add source to list
-        sources.append(source)
+        if source and ("id" in source or "title" in source):
+            sources.append(source)
 
     return sources
