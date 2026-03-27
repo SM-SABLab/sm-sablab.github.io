@@ -2,6 +2,8 @@
 cite process to convert sources and metasources into full citations
 """
 
+print("===== DEBUG START =====")
+
 import traceback
 from importlib import import_module
 from pathlib import Path
@@ -200,3 +202,6 @@ else:
     log("All done!", level="SUCCESS")
 
 log()
+
+print("===== BEFORE SAVE =====")
+print(citations)
