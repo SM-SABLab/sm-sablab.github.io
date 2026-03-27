@@ -17,7 +17,7 @@ def main(entry):
     # get id from entry
     _id = get_safe(entry, "orcid", "")
     if not _id:
-        eturn []
+        return []
 
     # query api
     @log_cache
