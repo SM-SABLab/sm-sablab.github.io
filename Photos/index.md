@@ -5,20 +5,43 @@ nav:
   tooltip: Lab life 
 ---
 
+<div class="photo-grid">
 
-<div class="grid">
-  <div class="card">
-    <img src="/images/img1.jpg">
-    <p>Organoid culturdfe</p>
+  <div class="photo-item">
+    <img src="images/photo1.jpg">
+    <div class="overlay">
+      <div class="text">
+        Workshop 2025<br>
+        BIO N Health
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <img src="/images/img2.jpg">
-    <p>Immunostaining</p>
+  <div class="photo-item">
+    <img src="images/photo2.jpg">
+    <div class="overlay">
+      <div class="text">
+        Angewandte Chemie Cover
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <img src="/images/img3.jpg">
-    <p>Confocal imaging</p>
+  <div class="photo-item">
+    <img src="images/photo3.jpg">
+    <div class="overlay">
+      <div class="text">
+        Lab Dinner
+      </div>
+    </div>
   </div>
+
+  <div class="photo-item">
+    <img src="images/photo4.jpg">
+    <div class="overlay">
+      <div class="text">
+        Conference
+      </div>
+    </div>
+  </div>
+
 </div>
