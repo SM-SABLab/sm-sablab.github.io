@@ -2,11 +2,11 @@ import json
 from urllib.request import Request, urlopen
 import yaml
 
-# 👉 너 ORCID 넣기
 ORCID_ID = "0000-0002-9526-9891"
 
 endpoint = f"https://pub.orcid.org/v3.0/{ORCID_ID}/works"
 headers = {"Accept": "application/json"}
+
 
 def safe_get(d, *keys):
     for k in keys:
@@ -14,6 +14,7 @@ def safe_get(d, *keys):
             return None
         d = d.get(k)
     return d
+
 
 request = Request(url=endpoint, headers=headers)
 response = json.loads(urlopen(request, timeout=10).read())
@@ -37,38 +38,46 @@ for work in works:
             if eid.get("external-id-type") == "doi":
                 doi = eid.get("external-id-value")
 
-        # title 없으면 skip
         if not title:
             continue
 
+        # 👉 원하는 YAML 구조 그대로 맞춤
         citation = {
+            "id": f"doi:{doi}" if doi else title,
             "title": title,
-            "authors": ["Jumee Kim"],  # ⭐ 반드시 필요 (템플릿 요구)
-            "publisher": journal if journal else "",
+            "authors": [
+                "Jumee Kim"
+            ],
+            "publisher": journal if journal else "Unknown",
             "date": f"{year}-01-01" if year else "1900-01-01",
-            "type": "paper"  # ⭐ 반드시 필요
+            "link": f"https://doi.org/{doi}" if doi else "",
+            "orcid": ORCID_ID,
+            "plugin": "orcid.py",
+            "file": "orcid.yaml"
         }
 
-        if doi:
-            citation["id"] = f"doi:{doi}"
-            citation["link"] = f"https://doi.org/{doi}"
-        else:
-            # DOI 없으면 id라도 만들어줘야 렌더링됨
-            citation["id"] = title
-
         citations.append(citation)
+
 
 # 최신순 정렬
 citations.sort(key=lambda x: x.get("date", ""), reverse=True)
 
-# YAML 저장 (깨짐 방지 설정 포함)
-with open("_data/citations.yaml", "w") as f:
+
+# 🔥 YAML 줄바꿈 / 들여쓰기 강제 (핵심)
+class IndentDumper(yaml.SafeDumper):
+    def increase_indent(self, flow=False, indentless=False):
+        return super(IndentDumper, self).increase_indent(flow, False)
+
+
+with open("_data/citations.yaml", "w", encoding="utf-8") as f:
     yaml.dump(
         citations,
         f,
+        Dumper=IndentDumper,
         sort_keys=False,
         allow_unicode=True,
-        default_flow_style=False
+        default_flow_style=False,
+        width=1000  # 줄바꿈 방지
     )
 
 print(f"✅ {len(citations)} publications generated")
