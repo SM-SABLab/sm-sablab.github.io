@@ -1,13 +1,3 @@
-- id: test
-  title: test paper
-  authors:
-    - Jumee Kim
-  publisher: test
-  date: '2025-01-01'
-  link: https://example.com
-  orcid: 0000-0002-9526-9891
-  plugin: orcid.py
-  file: orcid.yaml
 - id: doi:10.1101/2025.11.03.686120
   title: Enhanced liver regeneration via targeted mRNA delivery for partial in vivo reprogramming
   authors:
