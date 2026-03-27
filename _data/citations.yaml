@@ -1,0 +1,10 @@
+- id: test
+  title: test paper
+  authors:
+    - Jumee Kim
+  publisher: test
+  date: '2025-01-01'
+  link: https://example.com
+  orcid: 0000-0002-9526-9891
+  plugin: orcid.py
+  file: orcid.yaml
