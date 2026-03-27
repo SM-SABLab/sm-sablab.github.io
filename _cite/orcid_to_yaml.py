@@ -2,7 +2,7 @@ import json
 from urllib.request import Request, urlopen
 import yaml
 
-# 👉 너 ORCID 넣어
+# 👉 너 ORCID 넣기
 ORCID_ID = "0000-0002-9526-9891"
 
 endpoint = f"https://pub.orcid.org/v3.0/{ORCID_ID}/works"
@@ -15,12 +15,8 @@ def safe_get(d, *keys):
         d = d.get(k)
     return d
 
-try:
-    request = Request(url=endpoint, headers=headers)
-    response = json.loads(urlopen(request, timeout=10).read())
-except Exception as e:
-    print("❌ ORCID API 실패:", e)
-    exit(1)
+request = Request(url=endpoint, headers=headers)
+response = json.loads(urlopen(request, timeout=10).read())
 
 works = response.get("group", [])
 
@@ -30,7 +26,6 @@ for work in works:
     summaries = work.get("work-summary", [])
 
     for s in summaries:
-        # 안전하게 값 가져오기
         title = safe_get(s, "title", "title", "value")
         journal = safe_get(s, "journal-title", "value")
         year = safe_get(s, "publication-date", "year", "value")
@@ -48,21 +43,32 @@ for work in works:
 
         citation = {
             "title": title,
+            "authors": ["Jumee Kim"],  # ⭐ 반드시 필요 (템플릿 요구)
             "publisher": journal if journal else "",
             "date": f"{year}-01-01" if year else "1900-01-01",
+            "type": "paper"  # ⭐ 반드시 필요
         }
 
         if doi:
             citation["id"] = f"doi:{doi}"
             citation["link"] = f"https://doi.org/{doi}"
+        else:
+            # DOI 없으면 id라도 만들어줘야 렌더링됨
+            citation["id"] = title
 
         citations.append(citation)
 
 # 최신순 정렬
 citations.sort(key=lambda x: x.get("date", ""), reverse=True)
 
-# 저장
+# YAML 저장 (깨짐 방지 설정 포함)
 with open("_data/citations.yaml", "w") as f:
-    yaml.dump(citations, f, sort_keys=False, allow_unicode=True)
+    yaml.dump(
+        citations,
+        f,
+        sort_keys=False,
+        allow_unicode=True,
+        default_flow_style=False
+    )
 
-print(f"✅ {len(citations)}개 논문 저장 완료")
+print(f"✅ {len(citations)} publications generated")
