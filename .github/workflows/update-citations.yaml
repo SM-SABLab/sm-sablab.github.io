@@ -58,7 +58,7 @@ jobs:
 
       - name: Build updated citations
         if: github.event.action != 'closed'
-        run: python _cite/cite.py
+        run: python _cite/orcid_to_yaml.py
         timeout-minutes: 15
 
       - name: Commit cache
