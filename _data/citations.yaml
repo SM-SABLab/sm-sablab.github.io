@@ -10,7 +10,7 @@
     - Seunghee Hong
     - Seung-Woo Cho
     - Hyuk-Jin Cha
-  publisher: Unknown
+  publisher: BioRxiv
   date: '2025-01-01'
   link: https://doi.org/10.1101/2025.11.03.686120
   orcid: 0000-0002-9526-9891
@@ -27,20 +27,6 @@
   publisher: AGING CELL
   date: '2025-01-01'
   link: https://doi.org/10.1111/ACEL.70268
-  orcid: 0000-0002-9526-9891
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1111/acel.70268
-  title: Organ‐Specific Dedifferentiation and Epigenetic Remodeling in In Vivo Reprogramming
-  authors:
-    - Beom‐Ki Jo
-    - Seung‐Yeon Lee
-    - Hee‐Ji Eom
-    - '**Jumee Kim**'
-    - Hyuk‐Jin Cha
-  publisher: Aging Cell
-  date: '2025-01-01'
-  link: https://doi.org/10.1111/acel.70268
   orcid: 0000-0002-9526-9891
   plugin: orcid.py
   file: orcid.yaml
@@ -161,30 +147,6 @@
   publisher: BIOMATERIALS
   date: '2022-01-01'
   link: https://doi.org/10.1016/J.BIOMATERIALS.2022.121419
-  orcid: 0000-0002-9526-9891
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1016/j.biomaterials.2022.121419
-  title: Multiple isogenic GNE-myopathy modeling with mutation specific phenotypes from human pluripotent stem cells by base editors
-  authors:
-    - Ju-Chan Park
-    - '**Jumee Kim**'
-    - Hyun-Ki Jang
-    - Seung-Yeon Lee
-    - Keun-Tae Kim
-    - Eun-Ji Kwon
-    - Seokwoo Park
-    - Hyun Sik Lee
-    - Hyewon Choi
-    - Seung-Yeol Park
-    - Hee-Jung Choi
-    - Soon-Jung Park
-    - Sung-Hwan Moon
-    - Sangsu Bae
-    - Hyuk-Jin Cha
-  publisher: Biomaterials
-  date: '2022-01-01'
-  link: https://doi.org/10.1016/j.biomaterials.2022.121419
   orcid: 0000-0002-9526-9891
   plugin: orcid.py
   file: orcid.yaml

@@ -1,3 +1,4 @@
+
 import json
 from urllib.request import Request, urlopen
 import yaml
@@ -11,14 +12,12 @@ MY_NAME = "Jumee Kim"
 endpoint = f"https://pub.orcid.org/v3.0/{ORCID_ID}/works"
 headers = {"Accept": "application/json"}
 
-
 def safe_get(d, *keys):
     for k in keys:
         if not d:
             return None
         d = d.get(k)
     return d
-
 
 def get_authors_from_crossref(doi):
     try:
@@ -37,7 +36,6 @@ def get_authors_from_crossref(doi):
         return authors
     except:
         return []
-
 
 request = Request(url=endpoint, headers=headers)
 response = json.loads(urlopen(request, timeout=10).read())
@@ -97,14 +95,11 @@ for work in works:
 
         citations.append(citation)
 
-
 citations.sort(key=lambda x: x.get("date", ""), reverse=True)
-
 
 class IndentDumper(yaml.SafeDumper):
     def increase_indent(self, flow=False, indentless=False):
         return super(IndentDumper, self).increase_indent(flow, False)
-
 
 with open("_data/citations.yaml", "w", encoding="utf-8") as f:
     yaml.dump(
