@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7ebd6ce (111)
 - id: doi:10.1101/2025.11.03.686120
   title: Enhanced liver regeneration via targeted mRNA delivery for partial in vivo reprogramming
   authors:
@@ -15,16 +19,6 @@
   publisher: AGING CELL
   date: '2025-01-01'
   link: https://doi.org/10.1111/ACEL.70268
-  orcid: 0000-0002-9526-9891
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1111/acel.70268
-  title: Organ‐Specific Dedifferentiation and Epigenetic Remodeling in In Vivo Reprogramming
-  authors:
-    - Jumee Kim
-  publisher: Aging Cell
-  date: '2025-01-01'
-  link: https://doi.org/10.1111/acel.70268
   orcid: 0000-0002-9526-9891
   plugin: orcid.py
   file: orcid.yaml
@@ -75,16 +69,6 @@
   publisher: MOLECULAR THERAPY NUCLEIC ACIDS
   date: '2022-01-01'
   link: https://doi.org/10.1016/J.OMTN.2021.11.023
-  orcid: 0000-0002-9526-9891
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1016/J.BIOMATERIALS.2022.121419
-  title: Multiple isogenic GNE-myopathy modeling with mutation specific phenotypes from human pluripotent stem cells by base editors
-  authors:
-    - Jumee Kim
-  publisher: BIOMATERIALS
-  date: '2022-01-01'
-  link: https://doi.org/10.1016/J.BIOMATERIALS.2022.121419
   orcid: 0000-0002-9526-9891
   plugin: orcid.py
   file: orcid.yaml
