@@ -25,14 +25,19 @@ nav:
     <p><strong>Assistant Professor</strong><br>
     College of Pharmacy, Sookmyung Women's University (2025–present)</p>
 
-    <p><strong>Ph.D</strong><br>
-    College of Pharmacy, Seoul National University (2024)</p>
+    p {
+    margin-bottom: 20px;
+    } 
 
-    <p><strong>M.S</strong><br>
-    College of Pharmacy, Seoul National University (2018)</p>
+    <p><strong>Education</strong> </p>
+    <p><strong>Ph.D</strong> 
+    | College of Pharmacy, Seoul National University (2024)</p>
 
-    <p><strong>Pharm.D</strong><br>
-    College of Pharmacy, Sookmyung Women's University (2016)</p>
+    <p><strong>M.S</strong>
+    | College of Pharmacy, Seoul National University (2018)</p>
+
+    <p><strong>Pharm.D</strong>
+    | College of Pharmacy, Sookmyung Women's University (2016)</p>
 
   </div>
 
