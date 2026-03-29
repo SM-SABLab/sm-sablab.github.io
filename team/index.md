@@ -7,14 +7,14 @@ nav:
 
 # Team
 
-## Principle Investigator
+## Principal Investigator
 
 <div style="display: flex; align-items: flex-start; gap: 40px; margin-bottom: 60px;">
 
   <!-- 왼쪽: 카드 -->
   <div style="flex: 1;">
     <div class="card">
-      <img src="/images/img1.jpg" style="width: 100%; border-radius: 8px;">
+      <img src="/images_team/JM.jpeg" style="width: 100%; border-radius: 8px;">
       <p style="text-align: center;">Organoid culture</p>
     </div>
   </div>
@@ -45,13 +45,13 @@ nav:
 <div class="grid">
 
   <div class="card">
-    <img src="/images/img1.jpg">
-    <p>Organoid culture</p>
+    <img src="/images_team/SY.jpeg">
+    <p>Seo-Yeon Hong</p>
   </div>
 
   <div class="card">
-    <img src="/images/img2.jpg">
-    <p>Immunostaining</p>
+    <img src="/images_team/HH.jpeg">
+    <p>Hwan-Hee Jeong</p>
   </div>
 
 </div>
