@@ -208,7 +208,19 @@
 - id: doi:10.1016/J.BIOMATERIALS.2020.120295
   title: Safe scarless cassette-free selection of genome-edited human pluripotent stem cells using temporary drug resistance
   authors:
+    - Keun-Tae Kim
+    - Ju-Chan Park
+    - Hyeon-Ki Jang
+    - Haeseung Lee
+    - Seokwoo Park
     - '**Jumee Kim**'
+    - Ok-Seon Kwon
+    - Young-Hyun Go
+    - Yan Jin
+    - Wankyu Kim
+    - Jeongmi Lee
+    - Sangsu Bae
+    - Hyuk-Jin Cha
   publisher: BIOMATERIALS
   date: '2020-01-01'
   link: https://doi.org/10.1016/J.BIOMATERIALS.2020.120295
@@ -219,6 +231,11 @@
   title: <i>Rnf220</i> cooperates with <i>Zc4h2</i> t o specify spinal progenitor domains
   authors:
     - '**Jumee Kim**'
+    - Tae-Ik Choi
+    - Shinhye Park
+    - Myung Hee Kim
+    - Cheol-Hee Kim
+    - Seunghee Lee
   publisher: DEVELOPMENT
   date: '2018-01-01'
   link: https://doi.org/10.1242/DEV.165340
