@@ -59,6 +59,8 @@ for work in works:
         for eid in external_ids:
             if eid.get("external-id-type") == "doi":
                 doi = eid.get("external-id-value")
+                if doi:
+                    doi = doi.lower()
 
         if not title:
             continue
@@ -108,7 +110,7 @@ with open("_data/citations.yaml", "w", encoding="utf-8") as f:
         Dumper=IndentDumper,
         sort_keys=False,
         allow_unicode=True,
-        default_flow_style=False,그
+        default_flow_style=False,
         width=1000
     )
 
