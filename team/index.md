@@ -14,7 +14,7 @@ nav:
   <!-- 왼쪽: 카드 -->
   <div style="flex: 1;">
     <div class="card">
-      <img src="/images_team/JM.jpg" style="width: 100%; border-radius: 8px;">
+      <img src="/images_team/JM.jpeg" style="width: 100%; border-radius: 8px;">
     </div>
   </div>
 
