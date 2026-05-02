@@ -8,7 +8,7 @@ nav:
 <div class="photo-grid">
 
   <div class="photo-item">
-    <img src="images_photos/photo1.jpeg">
+    <img src="images_photos/photo1.jpg">
     <div class="overlay">
       <div class="text">
         Workshop 2025<br>

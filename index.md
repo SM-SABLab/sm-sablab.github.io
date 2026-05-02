@@ -29,5 +29,4 @@ permalink: /
     a brief description of your research interests.
   </p>
 
-  <a href="/contact/" class="main-button">Contact Us</a>
 </section>
