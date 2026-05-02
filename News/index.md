@@ -45,6 +45,3 @@ style: news
 </article>
 {% endfor %}
 </div>
-
-</div>
-</div>
