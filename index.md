@@ -1,3 +1,10 @@
+
+---
+layout: default
+title: Home
+permalink: /
+---
+
 <!-- Main Hero Image -->
 <section class="main-hero">
   <img src="/images/main.png" alt="Stem Cell and Advanced Biomedicine Laboratory">
