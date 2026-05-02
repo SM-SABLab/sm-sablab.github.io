@@ -4,4 +4,74 @@ main {
   flex-grow: 1;
 }
 
+.main-hero {
+  width: 100vw;
+  margin: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+.main-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  padding-top: 0 !important;
+}
+
+.page,
+.page-content,
+.content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.recruiting-section {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.recruiting-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.recruiting-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.main-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.main-button:hover {
+  background: #0894d7;
+  color: #fff;
+}
+
+body:has(.main-hero) main {
+  padding-top: 0 !important;
+}
+
+body:has(.main-hero) .main-hero {
+  margin-top: 0 !important;
+}
+
 /*# sourceMappingURL=main.css.map */
