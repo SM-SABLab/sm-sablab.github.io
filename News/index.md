@@ -2,25 +2,48 @@
 title: News
 nav:
   order: 4
-  tooltip: Musings and miscellany
+  tooltip: Lab news
 ---
 
 # News
 
-{% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+<h2>2026</h2>
 
-{% for year in posts_by_year %}
-  <details {% if year.name == "2026" %}open{% endif %}>
-    <summary><strong>{{ year.name }}</strong></summary>
+{% assign posts2026 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2026'" | sort: "date" | reverse %}
 
-    <ul>
-      {% for post in year.items %}
-        <li>
-          <span>{{ post.date | date: "%b %d" }}</span> —
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+{% for post in posts2026 %}
+<article class="news-post">
+  <h3>{{ post.date | date: "%B %-d, %Y" }}</h3>
+  <h2>{{ post.title }}</h2>
 
-  </details>
+  <div class="news-content">
+    {{ post.content }}
+  </div>
+
+  {% if post.image %}
+  <img class="news-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  {% endif %}
+</article>
 {% endfor %}
+
+<details class="news-year">
+<summary>2025</summary>
+
+{% assign posts2025 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2025'" | sort: "date" | reverse %}
+
+{% for post in posts2025 %}
+<article class="news-post">
+  <h3>{{ post.date | date: "%B %-d, %Y" }}</h3>
+  <h2>{{ post.title }}</h2>
+
+  <div class="news-content">
+    {{ post.content }}
+  </div>
+
+  {% if post.image %}
+  <img class="news-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  {% endif %}
+</article>
+{% endfor %}
+
+</details>
