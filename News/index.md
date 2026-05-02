@@ -3,13 +3,17 @@ title: News
 nav:
   order: 4
   tooltip: Lab news
-style: news 
+style: news
 ---
 
 # News
 
-<h2>2026</h2>
+<div class="news-tabs">
+  <button class="news-tab active" onclick="showNewsYear('2026', this)">2026</button>
+  <button class="news-tab" onclick="showNewsYear('2025', this)">2025</button>
+</div>
 
+<div id="news-2026" class="news-year-content active">
 {% assign posts2026 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2026'" | sort: "date" | reverse %}
 
 {% for post in posts2026 %}
@@ -25,16 +29,15 @@ style: news
   {% endif %}
 </article>
 {% endfor %}
+</div>
 
-<details class="news-year">
-<summary>2025</summary>
 
+<div id="news-2025" class="news-year-content">
 {% assign posts2025 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2025'" | sort: "date" | reverse %}
 
 {% for post in posts2025 %}
 <article class="news-post">
   <h3>{{ post.date | date: "%B %-d, %Y" }}</h3>
-  <h2>{{ post.title }}</h2>
 
   <div class="news-content">
     {{ post.content }}
@@ -45,5 +48,19 @@ style: news
   {% endif %}
 </article>
 {% endfor %}
+</div>
 
-</details>
+<script>
+function showNewsYear(year, button) {
+  document.querySelectorAll('.news-year-content').forEach(function(section) {
+    section.classList.remove('active');
+  });
+
+  document.querySelectorAll('.news-tab').forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+
+  document.getElementById('news-' + year).classList.add('active');
+  button.classList.add('active');
+}
+</script>

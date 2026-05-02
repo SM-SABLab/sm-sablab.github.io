@@ -1,3 +1,31 @@
+.news-tabs {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.news-tab {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #777;
+  cursor: pointer;
+}
+
+.news-tab.active {
+  color: #0894d7;
+}
+
+.news-year-content {
+  display: none;
+}
+
+.news-year-content.active {
+  display: block;
+}
+
 .news-post {
   margin-bottom: 4rem;
   padding: 0;
@@ -5,10 +33,10 @@
 }
 
 .news-post h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #222;
+  color: #0894d7;
 }
 
 .news-content {
@@ -29,15 +57,4 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-}
-
-.news-year {
-  margin-top: 3rem;
-}
-
-.news-year summary {
-  font-size: 1.4rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-bottom: 2rem;
 }
