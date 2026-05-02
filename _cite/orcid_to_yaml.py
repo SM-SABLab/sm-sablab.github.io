@@ -108,7 +108,7 @@ with open("_data/citations.yaml", "w", encoding="utf-8") as f:
         Dumper=IndentDumper,
         sort_keys=False,
         allow_unicode=True,
-        default_flow_style=False,
+        default_flow_style=False,그
         width=1000
     )
 
