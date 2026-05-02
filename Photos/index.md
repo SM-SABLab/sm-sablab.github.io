@@ -26,6 +26,15 @@ nav:
   </div>
 
   <div class="photo-item">
+    <img src="/images_photos/2026-01-23.jpg">
+    <div class="overlay">
+      <div class="text">
+        Organoid 4D Symposium in Osaka
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-item">
     <img src="/images_photos/2026-01-15.jpg">
     <div class="overlay">
       <div class="text">
