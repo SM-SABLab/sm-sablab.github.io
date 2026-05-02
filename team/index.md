@@ -29,13 +29,13 @@ nav:
 
     <p> </p>
     <p><strong>Education</strong> </p>
-    <p><strong>Ph.D</strong> 
+    <p><strong>Ph.D.</strong> 
     | College of Pharmacy, Seoul National University (2024)</p>
 
-    <p><strong>M.S</strong>
+    <p><strong>M.S.</strong>
     | College of Pharmacy, Seoul National University (2018)</p>
 
-    <p><strong>Pharm.D</strong>
+    <p><strong>Pharm.D.</strong>
     | College of Pharmacy, Sookmyung Women's University (2016)</p>
 
   </div>
