@@ -21,7 +21,10 @@ style: news
   </div>
 
   {% if post.image %}
-  <img class="news-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  <img class="news-image"
+     src="{{ post.image | relative_url }}"
+     alt="{{ post.title }}"
+     style="width: {{ post.image_width | default: '100%' }};">
   {% endif %}
 </article>
 {% endfor %}
@@ -40,7 +43,10 @@ style: news
   </div>
 
   {% if post.image %}
-  <img class="news-image" src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  <img class="news-image"
+     src="{{ post.image | relative_url }}"
+     alt="{{ post.title }}"
+     style="width: {{ post.image_width | default: '100%' }};">
   {% endif %}
 </article>
 {% endfor %}
