@@ -3,6 +3,7 @@ title: News
 nav:
   order: 4
   tooltip: Lab news
+style: news 
 ---
 
 # News
@@ -14,7 +15,6 @@ nav:
 {% for post in posts2026 %}
 <article class="news-post">
   <h3>{{ post.date | date: "%B %-d, %Y" }}</h3>
-  <h2>{{ post.title }}</h2>
 
   <div class="news-content">
     {{ post.content }}

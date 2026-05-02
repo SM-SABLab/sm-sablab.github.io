@@ -1,0 +1,43 @@
+.news-post {
+  margin-bottom: 4rem;
+  padding: 0;
+  border: none;
+}
+
+.news-post h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.news-content {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.news-content p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.news-image {
+  display: block;
+  margin-top: 1.5rem;
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.news-year {
+  margin-top: 3rem;
+}
+
+.news-year summary {
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
