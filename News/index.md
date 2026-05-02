@@ -8,17 +8,7 @@ style: news
 
 # News
 
-<div class="news-tabs-container">
-
-<input type="radio" id="tab-2026" name="news-tab" checked>
-<input type="radio" id="tab-2025" name="news-tab">
-
-<div class="news-tabs">
-  <label for="tab-2026" class="news-tab">2026</label>
-  <label for="tab-2025" class="news-tab">2025</label>
-</div>
-
-<div class="news-panels">
+## 2026 
 
 <div class="news-panel panel-2026">
 {% assign posts2026 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2026'" | sort: "date" | reverse %}
@@ -36,6 +26,8 @@ style: news
 </article>
 {% endfor %}
 </div>
+
+## 2025
 
 <div class="news-panel panel-2025">
 {% assign posts2025 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2025'" | sort: "date" | reverse %}
