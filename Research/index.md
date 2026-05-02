@@ -29,7 +29,7 @@ nav:
     </div>
 
     <div class="research-section-image">
-      <img src="/images/research1.jpg" alt="Stem cell function and tissue regeneration">
+      <img src="/images/Research_1.png" alt="Stem cell function and tissue regeneration">
     </div>
   </div>
 
@@ -42,7 +42,7 @@ nav:
     </div>
 
     <div class="research-section-image">
-      <img src="/images/research2.jpg" alt="Organoid-based disease modeling and drug screening">
+      <img src="/images/Research_2.png" alt="Organoid-based disease modeling and drug screening">
     </div>
   </div>
 
@@ -55,7 +55,7 @@ nav:
     </div>
 
     <div class="research-section-image">
-      <img src="/images/research3.jpg" alt="Organoid-based regenerative therapy">
+      <img src="/images/Research_3.png" alt="Organoid-based regenerative therapy">
     </div>
   </div>
 </div>
