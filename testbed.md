@@ -144,7 +144,7 @@ pie title Pets adopted by volunteers
 
 ## Section
 
-{% include section.html background="images/background.jpg" %}
+{% include section.html background="images/background.png" %}
 
 Section, `background`
 
@@ -152,7 +152,7 @@ Section, `background`
 
 Section, `dark=true`
 
-{% include section.html background="images/background.jpg" dark=true %}
+{% include section.html background="images/background.png" dark=true %}
 
 Section, `background` `dark=true`
 
