@@ -1,3 +1,7 @@
+.news-tabs-container input[type="radio"] {
+  display: none;
+}
+
 .news-tabs {
   display: flex;
   gap: 2rem;
@@ -5,13 +9,25 @@
 }
 
 .news-tab {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 1.4rem;
+  font-family: inherit;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #777;
+  color: #222;
   cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.news-tab:hover {
+  color: #0894d7;
+}
+
+#tab-2026:checked ~ .news-tabs label[for="tab-2026"],
+#tab-2025:checked ~ .news-tabs label[for="tab-2025"] {
+  color: #0894d7;
 }
 
 .news-tab.active {
