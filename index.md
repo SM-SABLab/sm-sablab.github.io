@@ -3,35 +3,25 @@
   <img src="/images/main.png" alt="Stem Cell and Advanced Biomedicine Laboratory">
 </section>
 
-<!-- Main Content -->
-<section class="main-section">
-  <div class="recruiting-box">
-    <h2>Recruiting</h2>
-    <p>
-      We are looking for motivated students and researchers interested in
-      stem cell biology, organoid technologies, aging, regeneration, and
-      regenerative medicine.
-    </p>
-    <p>
-      If you are interested in joining our lab, please contact us with your CV
-      and a brief description of your research interests.
-    </p>
-    <a href="/contact/" class="main-button">Contact Us</a>
-  </div>
+<!-- Recruiting Message -->
+<section class="recruiting-section">
+  <h2>Recruiting</h2>
 
-  <div class="latest-news-box">
-    <h2>Latest News</h2>
+  <p>
+    We are looking for motivated students and researchers who are interested in
+    stem cell biology, organoid technologies, tissue regeneration, aging, and
+    regenerative medicine.
+  </p>
 
-    {% assign recent_news = site.posts | sort: "date" | reverse %}
-    {% for post in recent_news limit:5 %}
-      <div class="latest-news-item">
-        <p class="latest-news-date">{{ post.date | date: "%B %d, %Y" }}</p>
-        <a href="{{ post.url | relative_url }}" class="latest-news-title">
-          {{ post.title }}
-        </a>
-      </div>
-    {% endfor %}
+  <p>
+    Our lab welcomes students with strong curiosity, responsibility, and enthusiasm
+    for basic and translational biomedical research.
+  </p>
 
-    <a href="/news/" class="view-all-news">View all news</a>
-  </div>
+  <p>
+    If you are interested in joining our lab, please contact us with your CV and
+    a brief description of your research interests.
+  </p>
+
+  <a href="/contact/" class="main-button">Contact Us</a>
 </section>
