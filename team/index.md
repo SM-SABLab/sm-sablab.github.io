@@ -54,7 +54,7 @@ nav:
   </div>
 
   <div class="card">
-    <img src="/images_team/HH.jpeg">
+    <img src="/images_team/HH.png">
     <p>Hwan-Hee Jeong</p>
   </div>
 
