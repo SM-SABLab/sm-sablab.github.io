@@ -7,21 +7,12 @@ nav:
 
 <div class="photo-grid">
 
-  <div class="photo-item">
-    <img src="/images_photos/photo1.jpg">
-    <div class="overlay">
-      <div class="text">
-        Workshop 2025<br>
-        BIO N Health
-      </div>
-    </div>
-  </div>
 
   <div class="photo-item">
-    <img src="/images_photos/photo2.jpeg">
+    <img src="/images_photos/photo3.jpeg">
     <div class="overlay">
       <div class="text">
-        Angewandte Chemie Cover
+        Lab Dinner
       </div>
     </div>
   </div>
@@ -36,10 +27,55 @@ nav:
   </div>
 
   <div class="photo-item">
-    <img src="/images_photos/photo4.jpeg">
+    <img src="/images_photos/photo3.jpeg">
     <div class="overlay">
       <div class="text">
-        Conference
+        Lab Dinner
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-item">
+    <img src="/images_photos/photo3.jpeg">
+    <div class="overlay">
+      <div class="text">
+        Lab Dinner
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-item">
+    <img src="/images_photos/2025-08-20.jpg">
+    <div class="overlay">
+      <div class="text">
+        2025 KSSCR
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-item">
+    <img src="/images_photos/2025-08-19.jpg">
+    <div class="overlay">
+      <div class="text">
+        Bo-Min, Jumee, Ji-Yeon
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-item">
+    <img src="/images_photos/2025-06-18.jpg">
+    <div class="overlay">
+      <div class="text">
+        2025 Sorak Conference 
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-item">
+    <img src="/images_photos/2025-05-20.jpg">
+    <div class="overlay">
+      <div class="text">
+        2025 FAOBMB Young Scientist Program 
       </div>
     </div>
   </div>
