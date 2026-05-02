@@ -49,7 +49,7 @@ nav:
 <div class="grid">
 
   <div class="card">
-    <img src="/images_team/SY.jpeg">
+    <img src="/images_team/SY.png">
     <p>Seo-Yeon Hong</p>
   </div>
 
