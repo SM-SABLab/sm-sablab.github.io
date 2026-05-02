@@ -8,14 +8,20 @@ style: news
 
 # News
 
+<div class="news-tabs-container">
+
+<input type="radio" id="tab-2026" name="news-tab" checked>
+<input type="radio" id="tab-2025" name="news-tab">
+
 <div class="news-tabs">
-  <button class="news-tab active" onclick="showNewsYear('2026', this)">2026</button>
-  <button class="news-tab" onclick="showNewsYear('2025', this)">2025</button>
+  <label for="tab-2026" class="news-tab">2026</label>
+  <label for="tab-2025" class="news-tab">2025</label>
 </div>
 
-<div id="news-2026" class="news-year-content active">
-{% assign posts2026 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2026'" | sort: "date" | reverse %}
+<div class="news-panels">
 
+<div class="news-panel panel-2026">
+{% assign posts2026 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2026'" | sort: "date" | reverse %}
 {% for post in posts2026 %}
 <article class="news-post">
   <h3>{{ post.date | date: "%B %-d, %Y" }}</h3>
@@ -31,10 +37,8 @@ style: news
 {% endfor %}
 </div>
 
-
-<div id="news-2025" class="news-year-content">
+<div class="news-panel panel-2025">
 {% assign posts2025 = site.pages | where_exp: "p", "p.path contains 'News/Posts/2025'" | sort: "date" | reverse %}
-
 {% for post in posts2025 %}
 <article class="news-post">
   <h3>{{ post.date | date: "%B %-d, %Y" }}</h3>
@@ -50,17 +54,5 @@ style: news
 {% endfor %}
 </div>
 
-<script>
-function showNewsYear(year, button) {
-  document.querySelectorAll('.news-year-content').forEach(function(section) {
-    section.classList.remove('active');
-  });
-
-  document.querySelectorAll('.news-tab').forEach(function(tab) {
-    tab.classList.remove('active');
-  });
-
-  document.getElementById('news-' + year).classList.add('active');
-  button.classList.add('active');
-}
-</script>
+</div>
+</div>
