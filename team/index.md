@@ -49,6 +49,11 @@ nav:
 <div class="grid">
 
   <div class="card">
+    <img src="/images_team/Female.png">
+    <p>Yun-Jeong Choe, Ph.D.</p>
+  </div>
+
+  <div class="card">
     <img src="/images_team/SY.png">
     <p>Seo-Yeon Hong</p>
   </div>
@@ -57,6 +62,23 @@ nav:
     <img src="/images_team/HH.png">
     <p>Hwan-Hee Jeong</p>
   </div>
+
+  <div class="card">
+    <img src="/images_team/Female.png">
+    <p>I-Joon Koh</p>
+  </div>
+
+  <div class="card">
+    <img src="/images_team/Female.png">
+    <p>Ho-Youn Chang</p>
+  </div>
+
+  <div class="card">
+    <img src="/images_team/Female.png">
+    <p>Jae-Hui Hwang</p>
+  </div>
+
+  
 
 </div>
 

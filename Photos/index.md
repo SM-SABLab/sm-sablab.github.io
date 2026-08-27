@@ -8,6 +8,15 @@ nav:
 <div class="photo-grid">
 
   <div class="photo-item">
+    <img src="/images_photos/2026-08-20.jpg">
+    <div class="overlay">
+      <div class="text">
+        2026 KSSCR Annual Meeting 
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-item">
     <img src="/images_photos/2026-03-06.jpg">
     <div class="overlay">
       <div class="text">
