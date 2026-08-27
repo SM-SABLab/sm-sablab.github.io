@@ -69,7 +69,7 @@ nav:
   </div>
 
   <div class="card">
-    <img src="/images_team/Female.png">
+    <img src="/images_team/HY.png">
     <p>Ho-Youn Chang</p>
   </div>
 
