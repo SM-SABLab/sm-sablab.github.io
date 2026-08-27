@@ -52,6 +52,8 @@ for work in works:
         title = safe_get(s, "title", "title", "value")
         journal = safe_get(s, "journal-title", "value")
         year = safe_get(s, "publication-date", "year", "value")
+        month = safe_get(s, "publication-date", "month", "value") or "01"
+        day = safe_get(s, "publication-date", "day", "value") or "01"
 
         external_ids = (s.get("external-ids") or {}).get("external-id", [])
 
@@ -88,7 +90,7 @@ for work in works:
             "title": title,
             "authors": cleaned_authors,
             "publisher": journal if journal else "Unknown",
-            "date": f"{year}-01-01" if year else "1900-01-01",
+            "date": f"{year}-{int(month):02d}-{int(day):02d}" if year else "1900-01-01",
             "link": f"https://doi.org/{doi}" if doi else "",
             "orcid": ORCID_ID,
             "plugin": "orcid.py",

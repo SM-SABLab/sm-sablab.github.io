@@ -6,7 +6,7 @@
     - '**Jumee Kim**'
     - Hyuk-Jin Cha
   publisher: Molecules and Cells
-  date: '2026-01-01'
+  date: '2026-08-01'
   link: https://doi.org/10.1016/j.mocell.2026.100378
   orcid: 0000-0002-9526-9891
   plugin: orcid.py
@@ -20,7 +20,7 @@
     - '**Jumee Kim**'
     - Hyuk-Jin Cha
   publisher: Experimental & molecular medicine
-  date: '2026-01-01'
+  date: '2026-04-10'
   link: https://doi.org/10.1038/s12276-026-01701-7
   orcid: 0000-0002-9526-9891
   plugin: orcid.py
@@ -38,7 +38,7 @@
     - Seung-Woo Cho
     - Hyuk-Jin Cha
   publisher: Unknown
-  date: '2025-01-01'
+  date: '2025-11-04'
   link: https://doi.org/10.1101/2025.11.03.686120
   orcid: 0000-0002-9526-9891
   plugin: orcid.py
