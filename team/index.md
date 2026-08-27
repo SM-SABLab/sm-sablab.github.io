@@ -30,13 +30,13 @@ nav:
     <p> </p>
     <p><strong>Education</strong> </p>
     <p><strong>Ph.D.</strong> 
-    · College of Pharmacy, Seoul National University (2024)</p>
+    | College of Pharmacy, Seoul National University (2024)</p>
 
     <p><strong>M.S.</strong>
-    · College of Pharmacy, Seoul National University (2018)</p>
+    | College of Pharmacy, Seoul National University (2018)</p>
 
     <p><strong>Pharm.D.</strong>
-    · College of Pharmacy, Sookmyung Women's University (2016)</p>
+    | College of Pharmacy, Sookmyung Women's University (2016)</p>
 
   </div>
 
@@ -49,7 +49,7 @@ nav:
 <div class="grid">
 
   <div class="card">
-    <img src="/images_team/Female.png">
+    <img src="/images_team/YJ.png">
     <p>Yun-Jeong Choe, Ph.D.</p>
   </div>
 
